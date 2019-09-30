@@ -7,25 +7,20 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    articles: [],
+    data: [],
     news: [],
-    languages: []
+    languages: [],
+    word: ''
   },
   mutations: {
-    setArticles(state, articles) {
-      state.articles = articles
-    },
-    searchArticles(state, word) {
+    searchInfo(state, word) {
       state.word = word
+    },
+    setData(state, data) {
+      state.data = data
     },
     setNews(state, news) {
       state.news = news
-    },
-    searchNews(state, category) {
-      state.category = category
-    },
-    searchLang(state, name) {
-      state.name = name
     },
     setLang(state, languages) {
       state.languages = languages
@@ -33,19 +28,19 @@ export default new Vuex.Store({
   },
   actions: {
     loadArticles(context, word) {
-      context.commit('searchArticles', word)
+      context.commit('searchInfo', word)
       axios.get(`https://newsapi.org/v2/everything?qInTitle=${word}&apiKey=${key}`)
         .then(response => {
-          let articles = response.data.articles
-          context.commit('setArticles', articles)
+          let data = response.data.articles
+          context.commit('setData', data)
         })
         .catch(error => {
           console.log(error);
         })
     },
-    loadNews(context, category) {
-      context.commit('searchNews', category)
-      axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`)
+    loadNews(context, word) {
+      context.commit('searchInfo', word)
+      axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${word}&apiKey=${key}`)
         .then(response => {
           let news = response.data.articles
           context.commit('setNews', news)
@@ -54,9 +49,9 @@ export default new Vuex.Store({
           console.log(error);
         })
     },
-    loadLanguages(context, name) {
-      context.commit('searchLang', name)
-      axios.get(`https://newsapi.org/v2/top-headlines?country=${name}&apiKey=${key}`)
+    loadLanguages(context, word) {
+      context.commit('searchInfo', word)
+      axios.get(`https://newsapi.org/v2/top-headlines?country=${word}&apiKey=${key}`)
         .then(response => {
           let languages = response.data.articles
           context.commit('setLang', languages)

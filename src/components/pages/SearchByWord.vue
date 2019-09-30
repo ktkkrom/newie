@@ -2,7 +2,7 @@
 <v-container grid-list-xs,sm,md,lg,xl>
   <SearchBar />
   <v-layout row>
-    <v-flex justify-center xs18 sm10 md8 lg6 v-for="item in articles">
+    <v-flex justify-center xs18 sm10 md8 lg6 v-for="item in data">
       <v-hover v-slot:default="{ hover }">
         <v-card flat class="text-xs-center ma-3 justify-center" :elevation="hover ? 6 : 2" width="90%">
           <v-expansion-panels :accordion="accordion">
@@ -45,7 +45,7 @@ export default {
     SearchBar
   },
   computed: mapState([
-    'articles'
+    'data'
   ])
 }
 </script>

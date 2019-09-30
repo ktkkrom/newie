@@ -51,6 +51,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+h3 {
+  border: 2px solid white;
+  height: 40px;
+  font-family: 'Lato', sans-serif, 700;
+}
 .blockquote {
   font-size: 10px;
   max-height: 10px;
