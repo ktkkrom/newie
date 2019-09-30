@@ -54,6 +54,7 @@ export default {
 h3 {
   border: 2px solid white;
   height: 40px;
+  font-family: 'Lato', sans-serif, 700;
 }
 .search-border__extra {
   margin-left: 25px;
@@ -72,6 +73,7 @@ img {
  margin-left: 30px;
 }
 .blockquote {
-  font-size: 13px;
+  font-size: 10px;
+  max-height: 10px;
 }
 </style>

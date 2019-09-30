@@ -26,7 +26,7 @@ import Article from './Article.vue';
 import axios from 'axios';
 import key from '../../key.js';
 export default {
-  name: 'Trending',
+  name: 'TopHeadlines',
   components: {
     Article
   },
@@ -36,7 +36,7 @@ export default {
     key: key
   }),
   methods: {
-    fetchTrending() {
+    fetchHeadlines() {
       let trendType;
       if (this.showData) {
         trendType = 'us';
@@ -48,11 +48,11 @@ export default {
     }
   },
   mounted() {
-    this.fetchTrending();
+    this.fetchHeadlines();
   },
   watch: {
     showData() {
-      this.fetchTrending();
+      this.fetchHeadlines();
     }
   }
 }

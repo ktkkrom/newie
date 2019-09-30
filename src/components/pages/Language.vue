@@ -16,7 +16,7 @@
                   <p>{{data.description}}</p>
                 </v-expansion-panel-content>
               </div>
-              <v-img position :src="`${data.urlToImage}`"  height="250" width="500" ></v-img>
+              <v-img :src="`${data.urlToImage}`" position class="text-center" height="250" width="500" ></v-img>
               <p class="blockquote">  <a v-bind:href="`${data.url}`"> {{ data.url }} </a></p>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -52,9 +52,13 @@ export default {
 
 <style lang="css" scoped>
 .blockquote {
-  font-size: 13px;
+  font-size: 10px;
+  max-height: 10px;
 }
 .search-border__in {
   font-weight: bold
+}
+.text-center {
+ margin-left: 30px;
 }
 </style>

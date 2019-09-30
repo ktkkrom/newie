@@ -14,7 +14,7 @@
     <v-toolbar-items>
       <v-btn text><router-link class="blue--text router-link" to="/main">Main</router-link></v-btn>
       <v-btn text ><router-link class="blue--text router-link" to="/articles">articles</router-link></v-btn>
-      <v-btn text ><router-link class="blue--text router-link" to="/trending">Trending</router-link></v-btn>
+      <v-btn text ><router-link class="blue--text router-link" to="/headlines">Top Headlines</router-link></v-btn>
       <v-btn text ><router-link class="blue--text router-link" to="/categories">Categories</router-link></v-btn>
       <v-btn text><router-link class="blue--text router-link" to="/languages">languages</router-link></v-btn>
     </v-toolbar-items>

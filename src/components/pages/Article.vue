@@ -43,12 +43,14 @@ export default {
 h3 {
   border: 2px solid white;
   height: 40px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif, 700;
 }
 .blockquote {
-  font-size: 13px;
-  height: 15px;
+  font-size: 10px;
+  height: 10px;
 }
 .search-border__in {
-    font-weight: bold
+  font-weight: bold
 }
 </style>

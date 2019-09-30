@@ -34,7 +34,7 @@ export default new Vuex.Store({
   actions: {
     loadArticles(context, word) {
       context.commit('searchArticles', word)
-      axios.get(`https://newsapi.org/v2/everything?q=${word}&apiKey=${key}`)
+      axios.get(`https://newsapi.org/v2/everything?qInTitle=${word}&apiKey=${key}`)
         .then(response => {
           let articles = response.data.articles
           context.commit('setArticles', articles)
@@ -45,9 +45,9 @@ export default new Vuex.Store({
     },
     loadNews(context, category) {
       context.commit('searchNews', category)
-      axios.get(`https://newsapi.org/v2/sources?category=${category}&apiKey=${key}`)
+      axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${key}`)
         .then(response => {
-          let news = response.data.sources
+          let news = response.data.articles
           context.commit('setNews', news)
         })
         .catch(error => {
