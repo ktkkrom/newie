@@ -15,7 +15,7 @@
           </v-flex>
           <v-flex xs12 md4 lg2 text-center>
             <v-btn class="blue--text" @click="search()">
-              <span>Search</span>
+              <span>search</span>
             </v-btn>
           </v-flex>
         </v-layout>

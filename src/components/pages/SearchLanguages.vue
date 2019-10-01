@@ -5,7 +5,7 @@
           <v-select width="100"v-model="chosen" :options="['se','us','ua','de','ru','nl','il']"></v-select>
           </v-flex>
           <v-flex xs12 md4 lg2 text-center>
-            <v-btn class="blue--text" @click="get()">click
+            <v-btn class="blue--text" @click="get()">search
             </v-btn>
           </v-flex>
         </v-layout>

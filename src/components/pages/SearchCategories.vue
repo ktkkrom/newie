@@ -5,7 +5,7 @@
         <v-select width="100" v-model="selected" :options="['entertainment','general','health','science','sports','technology']"></v-select>
       </v-flex>
       <v-flex xs12 md4 lg2 text-center>
-        <v-btn class="blue--text" @click="search()">click
+        <v-btn class="blue--text" @click="search()">search
         </v-btn>
       </v-flex>
     </v-layout>
