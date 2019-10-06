@@ -10,7 +10,7 @@ export default new VueRouter({
   routes: [{
       path: '/',
       redirect: {
-        name: "SearchByWord"
+        name: "Main"
       }
     },
     {
